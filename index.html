@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+  </head>
+  <body>
+    <div id="app">
+      <h1>You must type a message</h1>
+      <textarea v-model="message"> </textarea>
+      <button v-show="message">Send message!</button>
+      <pre>
+        {{$data | json}}
+      </pre>
+    </div>
+  </body>
+  <script>
+    new Vue({
+      el: "#app",
+      data: { message: "Greetings from Vue v-model!" },
+    });
+  </script>
+</html>
